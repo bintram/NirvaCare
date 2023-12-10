@@ -270,8 +270,6 @@ body {
 }
 
 
-
-
 /* Gabung Footer Style */
 .footer {
   min-height: 53.125rem;
@@ -441,7 +439,6 @@ body {
   html {
     font-size: 62.5%;
   }
-
   
   .footer-cta img {
     width: 60%;
@@ -471,6 +468,63 @@ body {
 }
 
 
+@media (max-width: 635px) {
+  html {
+    font-size: 50%;
+  }
+
+  .wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 2));
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+    
+  }
+  .footer-container .main-content .footer-content {
+    padding-top: 3rem;
+    min-height: 12.375rem;
+    display: block;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 170%;
+  }
+
+  }
+
+.footer-cta img {
+    width: 60%;
+    height: 60%;
+  }
+
+  .tim-box {
+    overflow: hidden;
+  }
+  .footer-container .main-content .footer-content {
+    padding-top: 3rem;
+    min-height: 12.375rem;
+    display: block;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 140%;
+  }
+@media (max-width: 450px) {
+      html {
+        font-size: 55%;
+      }
+
+  .footer-cta img {
+    display: none;
+  }
+
+  .footer-content .content-list {
+    margin-bottom: 3rem;
+  }
+}
 /* STYLE BANTUAN PAGE */
 .hero-bantuan {
   min-height: 60vh;
@@ -615,4 +669,9 @@ body {
 
 .bantuan-bantuan .bantuan .accordion.active p {
   display: block;
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
 }
