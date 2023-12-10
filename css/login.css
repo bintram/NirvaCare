@@ -44,7 +44,8 @@ html{
   width: 100vw;
   height: 100vh;
   font-family: "Poppins", sans-serif;
-
+  overflow-x: hidden; /* Disable horizontal scrolling */
+  overflow-y: auto;   /* Enable vertical scrolling */
 }
 
 .body-container{ 
