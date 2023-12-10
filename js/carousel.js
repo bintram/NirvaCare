@@ -57,7 +57,7 @@ const dragStop = () => {
 const autoPlay = () => {
   if (window.innerWidth < 200) return; //return if window is smaller than 800
   // autoPlay the carousel after every 2500 ms
-  timeoutId = setTimeout(() => (carousel.scrollLeft += firstCardWidth), 1700);
+  timeoutId = setTimeout(() => (carousel.scrollLeft += firstCardWidth), 2500);
 };
 autoPlay();
 
