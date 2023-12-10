@@ -1063,15 +1063,6 @@ margin: auto;
   .footer-content .content-list {
     margin-bottom: 3rem;
   }
-  .wrapper .carousel {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 2));
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    scrollbar-width: 0;
-  }
 
 .navbar-logo{
   width: 20%;
@@ -1416,16 +1407,7 @@ margin: 3rem auto;
     font-size: 50%;
   }
 
-  .wrapper .carousel {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 2));
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    scrollbar-width: 0;
-    
-  }
+  
   .footer-container .main-content .footer-content {
     padding-top: 3rem;
     min-height: 12.375rem;
@@ -1438,7 +1420,33 @@ margin: 3rem auto;
 
   }
 
-
+  @media (max-width: 715px) {
+    html {
+      font-size: 55%;
+    }
+    .chevron {
+      height: 30px;
+      width: 30px;
+      background: var(--Aksen);
+      border-radius: 9px;
+      color: var(--White);
+      cursor: pointer;
+      top: 40%;
+      transform: translateY(-50%);
+    }
+    .col-left img {
+      display: none;
+      margin: auto;
+    }
+    .wrapper .carousel {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: calc((100% / 1));
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      scrollbar-width: 0;
+    }
 
 
 
@@ -1451,29 +1459,7 @@ margin: 3rem auto;
       html {
         font-size: 55%;
       }
-      .chevron {
-        height: 30px;
-        width: 30px;
-        background: var(--Aksen);
-        border-radius: 9px;
-        color: var(--White);
-        cursor: pointer;
-        top: 40%;
-        transform: translateY(-50%);
-      }
-      .col-left img {
-        display: none;
-        margin: auto;
-      }
-      .wrapper .carousel {
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: calc((100% / 1));
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        scrollbar-width: 0;
-      }
+  
       /* Layanan Start */
 
 .layanan {
