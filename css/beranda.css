@@ -1,0 +1,1697 @@
+:root {
+  --Aksen: #ffc05a;
+  --Primary: #a10840;
+  --Secondary: #171931;
+  --Tertiary: #ffc05a;
+  --navscroll:#5a0020;
+  --GradientPrimary-background: var(--GrdTrangprnt,
+      linear-gradient(89deg,
+        #5a0020 50.9%,
+        rgba(94, 3, 35, 0.64) 67.91%,
+        rgba(100, 8, 41, 0) 98.82%),
+      linear-gradient(180deg,
+        rgba(113, 6, 45, 0.91) 0%,
+        rgba(161, 8, 64, 0.91) 163.4%));
+  --GradientSecondary-background: var(--Gradient-Dark,
+      linear-gradient(99deg,
+        #3d3a4d 6.35%,
+        #212027 25.86%,.
+        #1a191c 63.52%,
+        #3d3a4d 97.99%));
+  --ColorGrey: #3d3a4d;
+  --ColorWhite: #fff;
+  --ColorBlack: #151515;
+  --Gradient-Dark: linear-gradient(99deg,
+      #3d3a4d 6.35%,
+      #212027 25.86%,
+      #1a191c 63.52%,
+      #3d3a4d 97.99%);
+
+      --Neutral1: #e8e8e8;
+      --Neutral2: #171717;
+      --Neutrel3: #242424;
+      --White: #ffffff;
+      --secondary: #171931;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--ColorWhite);
+  color: var(--ColorBlack);
+  overflow-x: hidden; /* Disable horizontal scrolling */
+  overflow-y: auto;   /* Enable vertical scrolling */
+
+}
+
+
+/* Navbar Start */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.navbar.scrolled {
+  background-color: #5a0020;
+  transition: background-color 0.6s ease;
+}
+
+.navbar .navbar-menu ul {
+  display: flex;
+  order: 2;
+}
+
+/* Style for the logo */
+.navbar-logo img {
+  max-width: 100%;
+  height: auto;
+  max-height: 70px;
+
+}
+
+/* Style for the navigation menu */
+.navbar-menu {
+  font-size: auto;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  padding: auto;
+}
+
+.navbar.navbar-logo {
+  max-width: 100%;
+  min-height: 40px;
+  max-height: 40px;
+}
+
+.navbar .navbar-menu a {
+  color: var(--ColorWhite);
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+}
+
+.navbar .navbar-menu a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 0.1rem solid var(--Tertiary);
+  transform: scaleX(0);
+  transition: transform 0.3s ease, border-color 0.2s ease;
+  /* Ditambahkan transisi warna batas */
+}
+
+.navbar .navbar-menu a:hover::after,
+.navbar .navbar-menu a:focus::after,
+/* fungsi fokus jika di klik item border tetap */
+.navbar .navbar-menu a:active::after {
+  transform: scaleX(1);
+  border-color: var(--Tertiary);
+}
+
+.navbar .navbar-menu a:hover,
+.navbar .navbar-menu a:focus,
+/* fungsi fokus jika di klik item border tetap */
+.navbar .navbar-menu a:active {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+.navbar-button {
+  display: flex;
+  gap: 1rem;
+  font-weight: 300;
+}
+
+.navbar-button a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 0.5rem 1.4rem;
+  border-radius: 100px;
+  text-align: center;
+}
+
+#HumbergerMenu {
+  display: none;
+}
+
+#LoginButton {
+  background-color: var(--Tertiary);
+  color: var(--ColorBlack);
+}
+
+/* Active (clicked) */
+#LoginButton:active {
+  background-color: var(--Tertiary);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+#RegisterButton {
+  background-color: white;
+  color: var(--ColorBlack);
+}
+
+
+#RegisterButton:active {
+  background-color: var(--ColorWhite);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+
+/* Hero Section Start */
+
+.heroimg {
+
+  min-height: 100vh;
+  z-index: 0;
+  min-height: 100vh;
+  padding: 1.4rem 7%;
+  display: flex;
+  align-items: center;
+  background-image: url(asset/header-img1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 0px 0px 0px 120px;
+}
+
+.heroimg::before {
+  border-radius: 0px 0px 0px 120px;
+
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100.1%;
+  background: var(--GrdTrangprnt,
+      linear-gradient(89deg,
+        #5a0020dd 50.9%,
+        rgba(94, 3, 35, 0.64) 67.91%,
+        rgba(100, 8, 41, 0) 98.82%),
+      linear-gradient(180deg,
+        rgba(113, 6, 45, 0.699) 0%,
+        rgba(161, 8, 64, 0.91) 163.4%));
+
+}
+
+.herobg {
+  background-color: #3D3A4D;
+
+}
+
+.herosection {
+  width: 100%;
+  margin-top: 8rem;
+  margin-bottom: 10rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  height: 100%;
+}
+
+.col-left {
+  text-align: left;
+  z-index: 1;
+  color: var(--ColorWhite);
+}
+
+.col-left h1 {
+  font-size: 4.5rem;
+
+}
+
+.col-left span {
+  color: var(--Tertiary);
+}
+
+.col-left p {
+  font-size: 1.2rem;
+  letter-spacing: 15px;
+  line-height: 5rem;
+
+}
+
+.col-right {
+  width: 100%;
+  z-index: 1;
+}
+
+
+.heroimg img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Kenalin Section Start */
+.kenalin-nirvacare {
+  margin-top: 50px;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-left: auto;
+  background: var(--Gradient-Dark,
+      linear-gradient(99deg,
+        #3d3a4d 6.35%,
+        #212027 25.86%,
+        #1a191c 63.52%,
+        #3d3a4d 97.99%));
+  padding: 40px 0;
+  border-top-right-radius: 120px;
+  border-bottom-left-radius: 120px;
+  position: relative;
+}
+
+.kenalin-nirvacare::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  /* 50% untuk warna kiri */
+  height: 100%;
+  background: #fff;
+  /* Warna kiri */
+}
+
+.kenalin-nirvacare::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  /* 50% untuk warna kanan */
+  height: 100%;
+  background: #820935;
+  /* Warna kanan */
+}
+
+
+
+.kenalin-content h2 {
+  color: var(--color-base-white, #fff);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 128.5%;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.gabung-button {
+  width: 100%;
+  text-align: center;
+
+}
+
+.gabung-link {
+  display: inline-block;
+  padding: 15px 40px;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+  background-color: #ffc05a;
+  border-radius: 100px;
+  transition: background-color 0.3s ease;
+}
+
+.gabung-link:hover {
+  background-color: #ffffff;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  color: #ffc05a;
+}
+
+
+
+/* Tentang Nirva Start */
+
+.kenalin-container {
+  margin-top: -50px;
+}
+
+
+
+.tentang-nirvacare ::after {
+  z-index: -6;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: #d63c3c;
+}
+
+.tentang-nirvacare {
+  background-color: #3D3A4D;
+  margin-top: -50px;
+}
+
+.tentang-content {
+  border-top-right-radius: 100px;
+  background-color: var(--ColorWhite);
+}
+
+.tentang-content h2 {
+  padding-top: 5rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.tentang-content p {
+  font-size: 1.2rem;
+  color: #333;
+  padding: 1.4rem 7%;
+  padding-bottom: 1rem;
+text-align: center;
+
+}
+
+/* Tentang Nirva End */
+
+
+
+
+
+
+/* Section Headline Testimoni Start */
+.testimoniHeadline {
+  margin-top: 10rem;
+  text-align: center;
+  background-color: white;
+}
+
+.testimoniHeadline h2 {
+  font-weight: bold;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.testimoniHeadline p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Section Headline Testimoni end */
+
+
+/* Testimoni Rating Section Start */
+/* Testimoni Rating Section Start */
+.testimoni {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff; /* Warna putih */
+}
+
+.testimoni h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.testimoni p {
+  font-size: 18px;
+}
+
+/* Testimoni Rating Section Start */
+.testimoni-section {
+  padding: 1.4rem 7%;
+  display: flex;
+  flex-wrap: wrap; /* Menambahkan flex-wrap untuk menangani konten responsif */
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.review-card {
+  width: 40%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.review-card:hover {
+  transform: scale(1.05);
+
+}
+
+.profile {
+  color: var(--ColorGrey);
+  display: flex;
+}
+
+.profile img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+  justify-content: space-between;
+}
+
+.profile h2 {
+  font-size: 2rem;
+  margin: auto 0;
+}
+
+.rating .star {
+  font-size: 2rem;
+  color: var(--Tertiary);
+}
+
+.ratingnumber {
+  margin-left: 1rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--ColorGrey);
+}
+
+/* Testimoni Rating Section End */
+
+/* Layanan Start */
+.layanan {
+  margin: 1rem auto;
+  padding: 1.4rem 7%;
+  align-items: center;
+  display: flex ;
+  justify-content: center; /* Menyamakan kedua elemen ke tengah */
+  background: var(--GrdTrangprnt,
+      linear-gradient(89deg,
+        #5a0020 50.9%,
+        rgba(94, 3, 35, 0.64) 67.91%,
+        rgba(100, 8, 41, 0) 98.82%),
+      linear-gradient(180deg,
+        rgba(113, 6, 45, 0.91) 0%,
+        rgba(161, 8, 64, 0.91) 163.4%));
+}
+
+.layanan-left {
+  margin: 5rem 0;
+  width: 30%;
+  text-align: center;
+}
+
+.layanan-left img {
+  width: 80%;
+  height:auto;
+  margin: auto;
+}
+
+.layanan-right {
+    margin: 5rem 0;
+  width: 70%; 
+  padding: 0;
+  text-align: left; 
+  
+}
+
+.layanan-right {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  
+}
+
+
+.layanan-right h1{
+  margin: 0;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.layanan-right p{
+  font-size: 1.2rem;
+}
+
+/* Acordion Start */
+
+.accordion-main {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  flex-wrap:wrap;
+margin: 1rem auto;
+}
+.content-arrow{
+  justify-content: space-between;
+  margin-top: auto;
+  text-align: end;
+  margin-right: 1rem;
+}
+#btn-layanan:hover {
+  stroke-width: 3;
+  border-radius: 8px;
+  transform: scale(1.2);
+  transition: ease-in-out 0.1s;
+}
+
+#btn-layanan {
+  background-color: transparent;
+  color: var(--Primary)
+}
+
+.accordion-container {
+  background-color:var(--ColorWhite);
+  width: auto;
+  height: 12rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.accordion-box {
+  padding: 2rem 0.5rem;
+  width: 8.5rem;
+  height: 100%;
+  cursor: pointer;
+  align-items: center;
+  background-color: var(--ColorWhite);
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-box:hover {
+  background-color: #e0e0e0;
+}
+
+.icon img {
+  width: 2.5rem;
+  height: auto;
+  margin: auto;
+}
+
+.title p {
+  color: #000000;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.content {
+  width: 0;
+  display: block;
+  background-color: #ffffff;
+  overflow: hidden;
+  transition: width 0.7s; /* Adding a transition for smooth effect */
+margin: auto;
+}
+
+.content p {
+  padding: 1rem;
+  color: #000000;
+}
+
+
+.content.active {
+  width: 10rem;
+}
+
+
+/* Acordion End */
+/* Layanan End */
+
+
+
+.kenalin-kami{
+  padding: 1.4rem 7%;
+  margin: auto;
+
+}
+
+.headline-kenalin h1{
+  font-size: 2rem;
+ margin-top: 2rem;
+  text-align: center;
+  
+}
+
+.headline-kenalin p{
+  font-size: 1.5rem;
+  margin: auto;
+  text-align: center;
+}
+
+
+.carousel {
+  transition: scroll 0.5s ease-in-out;
+}
+
+/* Add smooth transition to the card */
+.carousel .card {
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Add transition to the dragging state */
+.carousel.dragging {
+  transition: none;
+}
+
+/* Add transition to the no-transition state */
+.carousel.no-transition {
+  transition: none;
+}
+/* Carausel Kenalin Start */
+.carousel-container {
+  padding: 1.4rem 7%;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  max-width: 90vw;
+  position: relative;
+}
+
+.carousel :where(.card .img) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3));
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: 0;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+
+.chevron {
+  height: 50px;
+  width: 50px;
+  background: var(--Aksen);
+  border-radius: 16px;
+  color: var(--White);
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+#chevron-left {
+  left: 0;
+
+}
+
+#chevron-right {
+  right: 0;
+}
+
+.carousel .card {
+  scroll-snap-align: start;
+  list-style: none;
+  background: var(--White);
+  border-radius: 20px;
+  min-height: 25rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.card .img {
+  width: 20.5rem;
+  height: 20.5rem;
+  border-radius: 20px;
+}
+
+.card .img img {
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 3px solid var(--White);
+}
+
+.carousel .card h2 {
+  color: var(--Black);
+  font-size: 1.75em;
+  font-weight: 600;
+  line-height: normal;
+  padding-top: 2rem;
+}
+
+.carousel .card span {
+  color: var(--Black);
+  font-size: 1.25em;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* Gabung Footer Style */
+.footer {
+  min-height: 53.125rem;
+  margin-top: 2rem;
+  width: 100vw;
+  right: 0;
+  left: 0;
+  background: var(--White);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .footer-cta {
+  display: flex;
+  height: 20rem;
+  max-width: 70rem;
+  padding: 2rem 0;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 54px;
+  z-index: 2;
+  background: var(
+    --gradient,
+    linear-gradient(180deg, #71062d 0%, #a10840 163.4%)
+  );
+}
+
+.footer-cta .gabung-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  padding: 0 2.5rem 0 4.5rem;
+  z-index: 2;
+}
+
+.footer-cta img {
+  width: 25.625rem;
+  height: 15.75rem;
+  padding: 0 5rem 0 0;
+}
+
+.footer-cta .gabung-content h3 {
+  color: var(--white, var(--color-base-white, #fff));
+  font-size: 2.5em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 46.8px */
+}
+
+.footer-cta .gabung-content p {
+  color: var(--white, var(--color-base-white, #fff));
+  font-size: 1.25em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 24px */
+}
+
+.footer-cta .gabung-content a {
+  display: flex;
+  padding: 10px 70px;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background: var(--Aksen);
+  border-radius: 100px;
+  color: #000;
+  text-align: center;
+  font-size: 1.25em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 24px */
+}
+
+.footer .footer-container {
+  right: 0;
+  left: 0;
+  width: 100vw;
+  position: relative;
+  background: var(--secondary);
+  min-height: 42.563rem;
+  margin-top: -10rem;
+}
+
+.footer .footer-container .main-content {
+  left: 0;
+  right: 0;
+  padding: 1.4rem 7%;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  margin-top: 13rem;
+}
+
+.footer-container .main-content img {
+  width: 8.313rem;
+  height: 6.186rem;
+}
+
+.footer-container .main-content .footer-content {
+  padding-top: 3rem;
+  min-height: 12.375rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-content h5 {
+  color: var(--White, var(--color-base-white, #fff));
+  font-size: 1.25em;
+  font-weight: 600;
+  line-height: 120%; /* 24px */
+}
+
+.footer-content p {
+  color: var(--White, var(--color-base-white, #fff));
+  font-size: 1em;
+  font-weight: 400;
+  padding-top: 1rem;
+  line-height: 120%; /* 19.2px */
+}
+
+.footer-content .content-list img {
+  height: 2rem;
+  width: 2rem;
+  margin-top: 1.5rem;
+  left: 0;
+}
+
+.footer-content .content-list .logo {
+  margin-left: 3rem;
+}
+
+.footer-content .content-list #appstore {
+  margin-top: 2.375rem;
+}
+
+.footer-container .footer-team {
+  margin-top: 3rem;
+  left: 0;
+  right: 0;
+}
+
+.footer-container .footer-team .hr-line {
+  border: 1px solid var(--White);
+}
+
+.footer-container .footer-team p {
+  margin-top: 1rem;
+  padding: 10px;
+  color: var(--White, var(--color-base-white, #fff));
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 120%; /* 19.2px */
+}
+
+
+
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+  .card .img {
+    width: 15.5rem;
+    height: 15.5rem;
+    border-radius: 20px;
+  }
+  .chevron {
+    height: 30px;
+    width: 30px;
+    background: var(--Aksen);
+    border-radius: 9px;
+    color: var(--White);
+    cursor: pointer;
+    top: 45%;
+    transform: translateY(-50%);
+  }
+  .card .img img {
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid var(--White);
+  }
+  
+  .carousel .card h2 {
+    color: var(--Black);
+    font-size: 1.75em;
+    font-weight: 600;
+    line-height: normal;
+    padding-top: 2rem;
+  }
+  
+  .carousel .card span {
+    color: var(--Black);
+    font-size: 1.25em;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+}
+
+
+/* Tablet */
+@media (max-width: 885px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .chevron {
+    height: 30px;
+    width: 30px;
+    background: var(--Aksen);
+    border-radius: 9px;
+    color: var(--White);
+    cursor: pointer;
+    top: 40%;
+    transform: translateY(-50%);
+  }
+  
+  .footer-cta img {
+    width: 60%;
+    height: 60%;
+  }
+
+  .tim-box {
+    overflow: hidden;
+  }
+  .footer-container .main-content .footer-content {
+    padding-top: 3rem;
+    min-height: 12.375rem;
+    display: block;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 180%;
+  }
+
+  .footer-cta img {
+    display: none;
+  }
+
+  .footer-content .content-list {
+    margin-bottom: 3rem;
+  }
+  .wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 2));
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+  }
+
+.navbar-logo{
+  width: 20%;
+  height: 100%;
+}
+
+  .heroimg {
+    border-radius: 0px 0px 0px 60px;
+  }
+  
+  .heroimg::before {
+    border-radius: 0px 0px 0px 60px;
+  }
+
+  #HumbergerMenu {
+    color: var(--ColorWhite);
+    display: block;
+    margin: auto;
+  }
+
+  .navbar .navbar-menu {
+    position: absolute;
+    background-color: var(--ColorWhite);
+    right: -100%;
+    top: 100%;
+    width: 23rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* Change flex-direction to column for vertical alignment */
+    align-items: flex-end;
+    text-align: right;
+    transition: right 0.3s ease;
+  }
+
+  .navbar .navbar-menu.active {
+    right: 0;
+  }
+
+  .navbar .navbar-menu a {
+    color: var(--Primary);
+    display: block;
+    margin: 1.5rem 0;
+    padding-right: 4.5rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: border-bottom 0.3s ease;
+  }
+
+  .navbar .navbar-menu a:hover {
+    border-radius: 0;
+  }
+
+  #LoginButton,
+  #RegisterButton {
+    text-decoration: none;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    font-size: 1.5rem;
+  }
+
+  #LoginButton {
+    background-color: var(--Tertiary);
+    color: var(--ColorBlack);
+  }
+
+  #LoginButton:active {
+    background-color: var(--Tertiary);
+  }
+
+  #RegisterButton {
+    margin-right: 20px;
+    background-color: white;
+    color: var(--ColorBlack);
+  }
+
+  #RegisterButton:active {
+    background-color: var(--ColorWhite);
+  }
+
+  .kenalin-nirvacare::after {
+    margin-top: 1px;
+
+    background: #972853;
+
+  }
+  .tentang-content {
+    border-top-right-radius: 60px;
+  }
+  .herosection {
+    grid-template-columns: 1fr;
+    margin-top: 10rem;
+
+  }
+
+  .col-left h1 {
+    font-size: 4.5rem;
+    text-align: center;
+  }
+
+  .col-left p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+
+  .col-left h1 br {
+    display: none;
+  }
+
+  .col-right img {
+    max-width: fit-content;
+    display: block;
+    margin:9rem auto;
+
+  }
+
+  .kenalin-nirvacare h2 {
+    margin: auto;
+    font-size: 2rem;
+  }
+
+  .kenalin-nirvacare h2 br {
+    display: none;
+  }
+
+  .gabung-link {
+    font-size: 1.5rem;
+    margin: auto;
+  }
+
+  .kenalin-nirvacare {
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+  }
+  .tentang-content h2{
+    font-size: 2rem;
+  }
+  .tentang-content p{
+    font-size: 1.5rem;
+  }
+   /* Kenalin End */
+
+
+/* Testimoni start */
+.testimoni-section {
+  flex-direction: column; 
+  align-items: center; 
+}
+.testimoniHeadline{
+  padding: 1.4rem 7%;
+}
+.testimoniHeadline h2{
+  font-size: 2rem;
+}
+.testimoniHeadline p{
+  font-size: 1.5rem;
+}
+.review-card {
+  width: 100%; 
+}
+
+.profile {
+  text-align: center; 
+}
+
+.profile img {
+  margin-right: 0; 
+  width: 15%;
+  height: 100%;
+}
+/* Testimoni end */
+
+.profile h2{
+  font-size:2rem;
+  margin-left: 2rem;
+}
+
+.info p{
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+
+/* Layanan Start */
+
+.layanan {
+  margin: 10rem auto;
+  padding: auto;
+  display: flex;
+flex-direction: column;
+  justify-content: center; /* Menyamakan kedua elemen ke tengah */
+  background: var(--GrdTrangprnt,
+      linear-gradient(89deg,
+        #5a0020 50.9%,
+        rgba(94, 3, 35, 0.64) 67.91%,
+        rgba(100, 8, 41, 0) 98.82%),
+      linear-gradient(180deg,
+        rgba(113, 6, 45, 0.91) 0%,
+        rgba(161, 8, 64, 0.91) 163.4%));
+        
+}
+
+.layanan-left {
+width:fit-content;
+height: fit-content;
+}
+
+.layanan-left img {
+  width:50%;
+  height: 100%;
+  margin: auto;
+}
+
+.layanan-right {
+    margin: 5rem auto;
+  width: 70%; 
+  padding: 0;
+  text-align: left; 
+}
+
+.layanan-right {
+  color: white;
+  margin: auto;
+  display: flex;
+
+  
+}
+
+
+.layanan-right h1{
+  text-align: center;
+  font-size: 4rem;
+}
+
+.layanan-right p{
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* Acordion Start */
+
+.accordion-main {
+margin: 3rem auto;
+  width: 100%;
+  height: 100%;
+  gap: 1rem;
+  flex-wrap:wrap;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+
+}
+
+.accordion-container {
+  background-color:var(--ColorWhite);
+  width: auto;
+  height: 12rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.accordion-box {
+  padding: 2rem 1rem;
+  width: 8.5rem;
+  height: 100%;
+  cursor: pointer;
+ align-content: center;
+  justify-content: center;
+  background-color: var(--ColorWhite);
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  
+}
+
+#btn-layanan{
+  width: 25%;
+  height: auto;
+}
+.title p{
+  font-size: 1rem;
+}
+.accordion-box:hover {
+  background-color: #e0e0e0;
+}
+
+.icon img {
+  width: 3.125rem;
+  height: auto;
+  margin: auto;
+}
+
+.title p {
+  color: #000000;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.content {
+  text-align: left;
+  width: 0;
+  display: block;
+  background-color: #ffffff;
+  overflow: hidden;
+  transition: width 0.7s; /* Adding a transition for smooth effect */
+}
+
+.content p {
+  text-align: left;
+  padding: 1rem;
+  color: #000000;
+  font-size:1.2rem;
+}
+
+.content button {
+  background-color: transparent;
+  position: absolute;
+  margin-top: 4rem;
+  margin-left: 10rem;
+}
+
+.content button img {
+  width: 2rem;
+  background-color: transparent;
+}
+
+.content.active {
+  width: 11rem;
+}
+
+
+/* Layanan ent */
+
+
+
+@media (max-width: 635px) {
+  html {
+    font-size: 50%;
+  }
+
+  .wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 2));
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+    
+  }
+  .footer-container .main-content .footer-content {
+    padding-top: 3rem;
+    min-height: 12.375rem;
+    display: block;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 170%;
+  }
+
+  }
+
+
+
+
+
+
+
+
+
+    /* Mobile */
+    @media (max-width: 450px) {
+      html {
+        font-size: 55%;
+      }
+      .chevron {
+        height: 30px;
+        width: 30px;
+        background: var(--Aksen);
+        border-radius: 9px;
+        color: var(--White);
+        cursor: pointer;
+        top: 40%;
+        transform: translateY(-50%);
+      }
+      .col-left img {
+        display: none;
+        margin: auto;
+      }
+      .wrapper .carousel {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: calc((100% / 1));
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: 0;
+      }
+      /* Layanan Start */
+
+.layanan {
+  margin: 10rem auto;
+  padding: 1.4rem 7%;
+  display: flex;
+flex-direction: column;
+  justify-content: center; /* Menyamakan kedua elemen ke tengah */
+  background: var(--GrdTrangprnt,
+      linear-gradient(89deg,
+        #5a0020 50.9%,
+        rgba(94, 3, 35, 0.64) 67.91%,
+        rgba(100, 8, 41, 0) 98.82%),
+      linear-gradient(180deg,
+        rgba(113, 6, 45, 0.91) 0%,
+        rgba(161, 8, 64, 0.91) 163.4%));
+        
+}
+
+.layanan-left {
+width:fit-content;
+height: fit-content;
+}
+
+.layanan-left img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.layanan-right {
+    margin: 5rem auto;
+  width: 70%; 
+  padding: 0;
+  text-align: left; 
+}
+
+.layanan-right {
+  color: white;
+  margin: auto;
+  display: flex;
+
+  
+}
+
+
+.layanan-right h1{
+  text-align: center;
+  font-size: 2rem;
+}
+
+.layanan-right p{
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Acordion Start */
+
+.accordion-main {
+margin: 3rem auto;
+  width: 100%;
+  height: 100%;
+  gap: 1rem;
+  flex-wrap:wrap;
+  flex-direction:column;
+align-items: center;
+
+}
+
+.accordion-container {
+  background-color:var(--ColorWhite);
+  width: auto;
+  height: 12rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.accordion-box {
+  padding: 2rem 3rem;
+  width: 12rem;
+  height: 100%;
+  cursor: pointer;
+  align-items: center;
+  background-color: var(--ColorWhite);
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-box:hover {
+  background-color: #e0e0e0;
+}
+
+.icon img {
+  width: 3.125rem;
+  height: auto;
+  margin: auto;
+}
+
+.title p {
+  color: #000000;
+  font-weight: 700;
+}
+
+.content {
+  width: 0;
+  display: block;
+  background-color: #ffffff;
+  overflow: hidden;
+  transition: width 0.7s; /* Adding a transition for smooth effect */
+}
+
+.content p {
+  padding: 1rem;
+  color: #000000;
+}
+
+.content button {
+  background-color: transparent;
+  position: absolute;
+  margin-top: 4rem;
+  margin-left: 10rem;
+}
+
+.content button img {
+  width: 2rem;
+  background-color: transparent;
+}
+
+.content.active {
+  width: 13rem;
+}
+
+/* Layanan ent */
+
+
+  .footer-cta img {
+    width: 60%;
+    height: 60%;
+  }
+
+  .tim-box {
+    overflow: hidden;
+  }
+  .footer-container .main-content .footer-content {
+    padding-top: 3rem;
+    min-height: 12.375rem;
+    display: block;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 140%;
+  }
+
+  .footer-cta img {
+    display: none;
+  }
+
+  .footer-content .content-list {
+    margin-bottom: 3rem;
+  }
+
+  .kenapa-content .partner-nirva {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .partner-nirva .box-container .box-content .list p {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .partner-nirva h3 {
+    margin-bottom: 3rem;
+    margin-top: -12rem;
+  }
+
+  .partner-nirva .hr-line {
+    display: none;
+  }
+
+  .partner-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8.063rem;
+  }
+
+  .kenapa-content {
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8.75rem;
+    margin: auto;
+    padding-top: 6rem;
+  }
+
+  .partner-nirva .box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+  }
+
+  .layanan-layanan .layanan-content .layanan-box img {
+    display: none;
+  }
+    }
+}

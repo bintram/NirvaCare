@@ -1,0 +1,252 @@
+:root {
+    --Primary: #a10840;
+    --Secondary: #171931;
+    --Tertiary: #ffc05a;
+    --navscroll:#5a0020;
+    --GradientPrimary-background: var(--GrdTrangprnt,
+        linear-gradient(89deg,
+          #5a0020 50.9%,
+          rgba(94, 3, 35, 0.64) 67.91%,
+          rgba(100, 8, 41, 0) 98.82%),
+        linear-gradient(180deg,
+          rgba(113, 6, 45, 0.91) 0%,
+          rgba(161, 8, 64, 0.91) 163.4%));
+    --GradientSecondary-background: var(--Gradient-Dark,
+        linear-gradient(99deg,
+          #3d3a4d 6.35%,
+          #212027 25.86%,
+          #1a191c 63.52%,
+          #3d3a4d 97.99%));
+    --ColorGrey: #3d3a4d;
+    --ColorWhite: #fff;
+    --ColorBlack: #151515;
+    --Gradient-Dark: linear-gradient(99deg,
+        #3d3a4d 6.35%,
+        #212027 25.86%,
+        #1a191c 63.52%,
+        #3d3a4d 97.99%);
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--ColorWhite);
+    color: var(--ColorBlack);
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    overflow-y: auto;   /* Enable vertical scrolling */
+  
+  }
+html{
+  width: 100vw;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+
+}
+
+.body-container{ 
+  display: flex;
+  padding: 1.4rem;
+  flex-direction: row;
+  margin: 3rem 0;
+}
+
+.body-container .bg{
+  height: auto;
+  background-image: url("../Property/login-bg.png");
+  border-radius: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+.body-container .bg img{
+  width: 8.5rem;
+  height: 5.75rem;
+  margin: auto;
+}
+
+.body-container .bg .content h1{
+  color: var(--ColorWhite);
+  max-width: 55vw;
+  text-wrap: wrap;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 700;  
+  line-height: 140%; /* 67.2px */
+}
+
+.body-container .bg .content p{
+  color: var(--ColorWhite);
+  font-size: 1em;
+  margin-top: 24px;
+  padding-bottom: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 29.4px */
+}
+
+.body-container .container{
+  width: 400px;
+  padding: 0 120px;
+}
+
+.body-container .container .content{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.body-container .container .content h1{
+  color: var(--Primary);
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+}
+
+.body-container .container .content p{
+  color: #7B7B7B;
+  text-align: center;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 1rem;
+  line-height: normal;
+  text-align: center;
+}
+
+.body-container .container .content .data-input{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.data-input label{
+  color: var(--Primary);
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.data-input .input{
+  width: 100%;
+}
+
+.data-input input{
+  font-size: 1em;
+  padding-right: 30px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  padding: 1rem 1rem;
+  flex-direction: row;
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: 38px;
+  margin-top: 1rem;
+  border: 2px solid var(--Neutral-1, #E8E8E8);
+}
+
+#eye{
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 80px;
+  transform: translateY(-128%);
+  z-index: 2;
+}
+
+.body-container .container .content a {
+  text-decoration: none;
+}
+
+.body-container .container .content a p{
+  font-size: 1em;
+  text-align: right;
+  color: var(--Secondary);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.body-container .container .content .daftar{
+  color: #7B7B7B;
+  text-align: center;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+#login-btn{
+  display: flex;
+  padding: 1rem 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 57px;
+  background: var(--Primary);
+  color: var(--ColorWhite);
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 5rem;
+}
+
+.body-container .container .content .daftar span{
+  color: var(--Primary);
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* Meida Query */
+@media(max-width:1220px){
+  html{
+    font-size: 70%;
+  }
+
+  .body-container{
+    left: 0;
+    right: 0;   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .body-container .bg{
+    display: none;
+  }
+  
+
+  .body-container .container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .body-container .container .content{
+    width: 60vw;
+    margin-top: 5rem;
+  }
+}
+
+
+
