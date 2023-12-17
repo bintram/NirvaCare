@@ -70,10 +70,10 @@ body {
   z-index: 100;
 }
 
-.navbar.scrolled {
-  background-color: #5a0020;
-  transition: background-color 0.6s ease;
-}
+  .navbar.scrolled {
+    background-color: #5a0020;
+    transition: background-color 0.6s ease;
+  }
 
 .navbar .navbar-menu ul {
   display: flex;
